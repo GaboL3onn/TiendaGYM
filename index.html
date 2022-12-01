@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+    <link rel="manifest" href="./manifest.json">
+    <script type="text/javascript">
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("sw.js");
+        }
+      </script>
+      <script src="push.min.js"></script>
+</head>
+<body>
+   
+    <div class="page-nav">
+        <h1>Mi tienda Gabriel León</h1>
+        <button id="checkout" class="button-checkout" onclick="pay()">Pagar</button>
+    </div>
+    <div class="page-content">
+        <div class="product-container">
+            <h3>Mancuerna 10k</h3>
+            <img src="images/product-1.jpg" />
+            <h1>$450</h1>
+            <button class="button-add" onclick="add('mancuerna', 450)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Banco</h3>
+            <img src="images/product-2.jpg" />
+            <h1>$350</h1>
+            <button class="button-add" onclick="add('banco', 300)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Kit de pesas</h3>
+            <img src="images/product-3.jpg" />
+            <h1>$850</h1>
+            <button class="button-add" onclick="add('Kit de pesas', 850)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>2 Mancuernas 10k con barra 10k</h3>
+            <img src="images/product-4.jpg" />
+            <h1>$980</h1>
+            <button class="button-add" onclick="add('barra & macuernas', 980)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Mancuerna 30k</h3>
+            <img src="images/product-5.jpg" />
+            <h1>$850</h1>
+            <button class="button-add" onclick="add('Mancuerna 30k', 850)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Base</h3>
+            <img src="images/product-6.jpg" />
+            <h1>$200</h1>
+            <button class="button-add" onclick="add('Base', 200)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Kit mancuernas pesas ajustables</h3>
+            <img src="images/product-7.jpg" />
+            <h1>$1999</h1>
+            <button class="button-add" onclick="add('Kit mancuernas pesas ajustables', 1999)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Pesas rusas</h3>
+            <img src="images/product-8.jpg" />
+            <h1>$1054</h1>
+            <button class="button-add" onclick="add('Pesas rusas', 1054)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Kit de mancuernas cromadas</h3>
+            <img src="images/product-9.jpg" />
+            <h1>$1449</h1>
+            <button class="button-add" onclick="add('Kit de mancuernas cromadas', 1449)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Juego de pesas con mancuernas</h3>
+            <img src="images/product-10.jpg" />
+            <h1>$300</h1>
+            <button class="button-add" onclick="add('Juego de pesas con mancuernas', 300)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Banco profesional, polea 7 en 1</h3>
+            <img src="images/product-11.jpg" />
+            <h1>$7100</h1>
+            <button class="button-add" onclick="add('Banco profesional, polea 7 en 1', 7100)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Par de seguros para barra olimpica</h3>
+            <img src="images/product-12.jpg" />
+            <h1>$249</h1>
+            <button class="button-add" onclick="add('Par de seguros para barra olimpica', 249)">Agregar</button>
+        </div>
+    </div>
+	<script>
+		Push.create("Hola mundo",{
+			body: "Este es el cuerpo de la notificacion",
+			icon: "images/utsem.jpg",
+			timeout: 4000,
+			onClick: function (push) {
+				window.location="https://nickersoft.github.io/push.js/";
+				this.close();
+			}
+		});
+	</script>
+</body>
