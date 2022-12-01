@@ -10,6 +10,8 @@
         }
       </script>
       <script src="push.min.js"></script>
+      <script src="./custom.js" defer></script>
+
 </head>
 <body>
    
@@ -103,14 +105,15 @@
         </div>
     </div>
 	<script>
-		Push.create("Hola mundo",{
-			body: "Este es el cuerpo de la notificacion",
+		Push.create("Gabriel León López",{
+			body: "Bienvenido A Tu TienditaGYM",
 			icon: "images/utsem.jpg",
 			timeout: 4000,
-			onClick: function (push) {
-				window.location="https://nickersoft.github.io/push.js/";
+			onClick: function () {
+				window.location="https://www.google.com.mx/";
 				this.close();
 			}
 		});
 	</script>
+    
 </body>
