@@ -1,22 +1,15 @@
-const notificarBtn = document.querySelector('#checkout');
 
-notificarBtn.addEventListener('click', () => {
-    Notification.requestPermission().then(resultado => {
-        console.log('Respuesta: ', resultado);
-    })
-})
+const checkout = document.querySelector('#checkout');
 
-const verNotificacion = document.querySelector('#checkout');
-
-verNotificacion.addEventListener('click', () => {
+checkout.addEventListener('click', () => {
     if (Notification.permission === 'granted') {
-        const notificacion = new Notification('Esta es la notificacion', {
-            icon: '/images/utsem.jpg',
-            body: 'Mi notificación push'
+        const notificacion = new Notification('TIENDITAGYM', {
+            icon: 'images/utsem.jpg',
+            body: 'Acabas De Realizar Una Compra, Graciaaaas!'
         });
 
         notificacion.onclick = function(){
-            window.open('http://google.com');
+            window.open(reload);
         }
     }
 })
